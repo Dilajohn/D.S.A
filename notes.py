@@ -1,4 +1,4 @@
-""" Learn DSA with Python | Python Data Structures and Algorithms
+""" >>> Learn DSA with Python | Python Data Structures and Algorithms <<<
 
 we will discuss the in-built data structures such as lists, tuples, dictionaries, etc, and some user-defined
  data structures such as linked lists, trees, graphs, etc, and traversal as well as searching and sorting algorithms
@@ -90,7 +90,7 @@ print("\nThird last element of tuple")
 print(Tuple[-3])
 
 """
-Set
+>>> Set <<<
 
 Python set is a mutable collection of data that does not allow any duplication. Sets are basically used to include
  membership testing and eliminating duplicate entries. The data structure used in this is Hashing, a popular technique
@@ -121,9 +121,11 @@ print()
 print("Geeks" in Set)
 
 """
-Frozen Sets
+>>> Frozen Sets <<<
 
-Frozen sets in Python are immutable objects that only support methods and operators that produce a result without affecting the frozen set or sets to which they are applied. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+Frozen sets in Python are immutable objects that only support methods and operators that produce a result
+ without affecting the frozen set or sets to which they are applied. While elements of a set can be modified at any time,
+   elements of the frozen set remain the same after creation.
 
 Example: Python Frozen set """
 
@@ -144,8 +146,10 @@ print(frozen_set)
 # frozen_set.add("h")
 
 """
-String
-Python Strings is the immutable array of bytes representing Unicode characters. Python does not have a character data type, a single character is simply a string with a length of 1.
+>>> String <<<
+
+Python Strings is the immutable array of bytes representing Unicode characters. Python does not have a character 
+data type, a single character is simply a string with a length of 1.
 
 Note: As strings are immutable, modifying a string will result in creating a new copy.
 
@@ -164,7 +168,7 @@ print("\nLast character of String is: ")
 print(String[-1])
 
 """
-Dictionary
+>>> Dictionary<<
 
 Python dictionary is an unordered collection of data that stores data in the format of key:value pair.
 It is like hash tables in any other language with the time complexity of O(1). Indexing of Python Dictionary
