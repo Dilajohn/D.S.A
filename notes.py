@@ -168,7 +168,7 @@ print("\nLast character of String is: ")
 print(String[-1])
 
 """
->>> Dictionary<<
+>>> Dictionary
 
 Python dictionary is an unordered collection of data that stores data in the format of key:value pair.
 It is like hash tables in any other language with the time complexity of O(1). Indexing of Python Dictionary
@@ -642,9 +642,9 @@ root.right     = Node(3);
 
 ''' 2 and 3 become left and right children of 1
         1
-        / \
-        2     3
-    / \ / \
+     /    \
+     2     3
+    / \   / \
 None None None None'''
 
 
