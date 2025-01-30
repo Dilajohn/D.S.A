@@ -203,11 +203,11 @@ the NumPy package.
 
 Example: Python NumPy Matrix Operations """
 
-import numpy as np # type: ignore (should remove the # type: ignore to run the code)
+# import numpy as np # type: ignore (should remove the # type: ignore to run the code)
 
-a = np.array([[1,2,3,4],[4,55,1,2],
+a = np.array([[1,2,3,4],[4,55,1,2],  # type: ignore
               [8,3,20,19],[11,2,22,21]])
-m = np.reshape(a,(4, 4))
+m = np.reshape(a,(4, 4)) # type: ignore
 print(m)
 
 # Accessing element
@@ -216,12 +216,12 @@ print(a[1])
 print(a[2][0])
 
 # Adding Element
-m = np.append(m,[[1, 15,13,11]],0)
+m = np.append(m,[[1, 15,13,11]],0) # type: ignore # type: ignore # type: ignore
 print("\nAdding Element")
 print(m)
 
 # Deleting Element
-m = np.delete(m,[1],0)
+m = np.delete(m,[1],0) # type: ignore # type: ignore
 print("\nDeleting Element")
 print(m)
 
@@ -769,7 +769,7 @@ printPostorder(root)
 """
 Time Complexity –  O(n)
 
-Breadth-First or Level Order Traversal
+>>> Breadth-First or Level Order Traversal<<<
 
 Level order traversal of a tree is breadth-first traversal for the tree. The level order traversal of the above tree is 1 2 3 4 5.
 
@@ -908,10 +908,10 @@ def inorder(root):
 
 # Driver program to test the above functions
 # Let us create the following BST
-# 50
-# /     \
-# 30     70
-# / \ / \
+#       50
+#    /   \
+#   30     70
+#  / \    / \
 # 20 40 60 80
 
 r = Node(50)

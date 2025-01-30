@@ -67,6 +67,9 @@
 """ Linked list """
 # Defining the linked list
 # Node class
+
+
+
 class Node:
     # function to initialize the  node object
     def __init__(self, data):
@@ -221,68 +224,178 @@ class Node:
 
 # A class that represents an individual node in a
 # Binary Tree
+# class Node:
+    # def __init__(self,key):
+        # self.left = None
+        # self.right = None
+        # self.val = key
+
+# Afunction to do inorder tree traversal
+# def printInorder(root):
+
+
+    # if root:
+
+        # first recur on left child
+        # printInorder(root.left)
+
+        # the print data of the node
+        # print(root.val),
+
+        # now recur on right child
+        # printInorder(root.right)
+
+# function to do postorder tree traversal
+# def printPostorder(root):
+
+    # if root:
+
+        # first recur on the left child
+        # printPostorder(root.left)
+
+        # then recur on the right child
+        # printPostorder(root.right)
+
+        # now print the data of the node
+        # print(root.val),
+
+# def printpreorder(root):
+
+    # if root:
+
+        # first print the data of the node
+        # print(root.val),
+
+        # then recur on the left child
+        # printpreorder(root.left)
+
+        # finally recur on the right child
+        # printpreorder(root.right)
+
+# driver code
+# root = Node(1)
+# root.left = Node(2)
+# root.right = Node(3)
+# root.left.left = Node(4)
+# root.left.right = Node(5)
+# print("Preorder traversal of binary tree is")
+# printpreorder(root)
+
+# print("\nInorder traversal of binary tree is ")
+# printInorder(root)
+
+# print("\nPostordertraversal of binary tree is")
+# printPostorder(root)
+
+""" Breadth-first OR Level order traversal"""
+
+# Python program to print level
+# order traversal using Queue
+
+# A node structure
+# class Node:
+
+    # A utility function to create a new node
+    # def __init__(self ,key):
+        # self.data = key
+        # self.left = None
+        # self.right = None
+
+# Iterative Method to print the
+# height of a binary tree
+# def printLevelOrder(root):
+
+    # Base Case
+    # if root is None:
+        # return
+    
+    # Create an empty queue
+    # for level order traversal
+    # queue = []
+
+    # Enqueue Root and initialize height
+    # queue.append(root)
+
+    # while(len(queue) > 0):
+    
+        # Print front of queue and
+        # remove it from queue
+        # print (queue[0].data)
+        # node = queue.pop(0)
+
+        # Enqueue left child
+        # if node.left is not None:
+            # queue.append(node.left)
+
+        # Enqueue right child
+        # if node.right is not None:
+            # queue.append(node.right)
+
+# Driver Program to test above function
+# root = Node(1)
+# root.left = Node(2)
+# root.right = Node(3)
+# root.left.left = Node(4)
+# root.left.right = Node(5)
+
+# print ("Level Order Traversal of binary tree is -")
+# printLevelOrder(root)
+
+""" Binary Search Tree"""
+
+# Python program to demonstrate
+# insert operation in binary search tree
+
+# A utility class that represents
+# an individual node in a BST
 class Node:
-    def __init__(self,key):
+    def __init__(self, key):
         self.left = None
         self.right = None
         self.val = key
 
-# Afunction to do inorder tree traversal
-def printInorder(root):
+# A utility function to insert
+# a new node with the given key
+def insert(root, key):
+    if root is None:
+        return Node(key)
+    else:
+        if root.val == key:
+            return root
+        elif root.val < key:
+            root.right = insert(root.right, key)
+        else:
+            root.left = insert(root.left, key)
+    return root
 
-
+# A utility function to do inorder tree traversal
+def inorder(root):
     if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
 
-        # first recur on left child
-        printInorder(root.left)
 
-        # the print data of the node
-        print(root.val),
+# Driver program to test the above functions
+# Let us create the following BST
+# 50
+# /     \
+# 30     70
+# / \ / \
+# 20 40 60 80
 
-        # now recur on right child
-        printInorder(root.right)
+r = Node(50)
+r = insert(r, 30)
+r = insert(r, 20)
+r = insert(r, 40)
+r = insert(r, 70)
+r = insert(r, 60)
+r = insert(r, 80)
 
-# function to do postorder tree traversal
-def printPostorder(root):
+# Print inorder traversal of the BST
+inorder(r)
 
-    if root:
 
-        # first recur on the left child
-        printPostorder(root.left)
-
-        # then recur on the right child
-        printPostorder(root.right)
-
-        # now print the data of the node
-        print(root.val),
-
-def printpreorder(root):
-
-    if root:
-
-        # first print the data of the node
-        print(root.val),
-
-        # then recur on the left child
-        printpreorder(root.left)
-
-        # finally recur on the right child
-        printpreorder(root.right)
-
-# driver code
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
-print("Preorder traversal of binary tree is")
-printpreorder(root)
-
-print("\nInorder traversal of binary tree is ")
-printInorder(root)
-
-print("\nPostordertraversal of binary tree is")
-printPostorder(root)
 
 
 
